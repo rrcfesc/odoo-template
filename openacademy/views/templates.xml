@@ -31,4 +31,17 @@
             <div class="oe_structure" />
         </t>
     </template>
+    <template id="products_item" inherit_id="website_sale.products_item">
+        <xpath expr="//h5" position = "after">
+            <p t-esc="product.id"></p>
+        </xpath>
+        <xpath expr="//h5" position = "attributes">
+            <attribute name="class" add="col-md-12, otra" separator=" " />
+        </xpath>
+        <xpath expr="//h5" position = "before">
+            <t t-foreach="product.public_categ_ids" t-as="catego">
+                <p><t t-esc="catego.name" /></p>
+            </t>
+        </xpath>
+    </template>
 </odoo>
