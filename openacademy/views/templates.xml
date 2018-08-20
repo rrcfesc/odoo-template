@@ -1,48 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
-    <template id="other-template">
-        <h1>Hola desde other template <t t-esc="foo"/></h1>
-        <t t-foreach="teachers" t-as="teacher">
-            <p><t t-esc="teacher"/></p>
-        </t>
-        <t t-raw="0" />
-    </template>
     <template id="index">
         <title>Academy</title>
-        <!--t t-foreach="teachers" t-as="teacher">
-            <p><t t-esc="teacher"/></p>
-        </t-->
-        <!--t t-if="1 == 1">
-            <p>Test</p>
-        </t-->
-        <!--t t-foreach="[1,2,3]" t-as="i">
-            <p><t t-esc="i" /></p>
-            <p>Value</p>
-            <t t-esc="i_value" />
-            <p>Index</p>
-            <t t-esc="i_index" />
-            <p>Size</p>
-            <t t-esc="i_size" />
-            <p>First</p>
-            <t t-esc="i_first" />
-            <p>Last</p>
-            <t t-esc="i_last" />
-            <p>Paridad</p>
-            <t t-esc="i_parity" />
-            <p>Even</p>
-            <t t-esc="i_even" />
-            <p>Odd</p>
-            <t t-esc="i_odd" />
-        </t-->
-        <!--div t-att-a="42">asdasd</div>
-        <t t-foreach="[1,2,3]" t-as="item">
-            <li t-attf-class="row {{ item }}"> <t t-esc="item"/> </li>
-        </t>
-        <div t-att="{'a':12, 'b':1452}" />
-        <div t-att="['a', 'b']" /-->
-        <t t-set="foo" t-value="'Ricardo'" />
-        <t t-call="openacademy.other-template">
-            <em> Algo </em>
+        <t t-foreach="teachers" t-as="teacher">
+            <p><t t-esc="teacher.id"/> <t t-esc="teacher.name" /></p>
         </t>
     </template>
    
