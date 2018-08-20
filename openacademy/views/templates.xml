@@ -44,4 +44,22 @@
             </t>
         </xpath>
     </template>
+    <!--template id="head_website" inherit_id="website.layout">
+        <xpath expr="//t[@t-set='head_website']" position = "inside">
+            
+            <meta property='meta-cat' t-esc="global_categs"/>
+        </xpath>
+    </template-->
+    <template id="frontend_layout" inherit_id="portal.frontend_layout">
+        <xpath expr="//header" position="before">
+            <t t-set="global_categs" t-value="env['product.public.category'].search([('parent_id', '=', False)])" />
+            <t t-foreach="global_categs" t-as="catego">
+                <p>
+                <a t-attf-href="/shop/category/{{ slug(catego) }}">
+                <t t-esc="catego.name" />
+                </a>
+                </p>
+            </t>
+        </xpath>
+    </template>
 </odoo>
