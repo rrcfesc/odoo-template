@@ -6,10 +6,29 @@
             <div class="oe_structure">
                 <t t-esc="user_id.name" />
                 <t t-foreach="teachers" t-as="teacher">
-                    <p><t t-esc="teacher.id"/> <t t-esc="teacher.name" /></p>
+                    <p>
+                        <t t-esc="teacher.id"/>
+                        <a t-attf-href="/academy/{{ slug(teacher) }}">link</a>
+                        <t t-esc="teacher.name" />
+                    </p>
                 </t>
             </div>
         </t>
     </template>
-   
+    <template id="biografy">
+        <t t-call="website.layout">
+            <t t-set="title"><t t-esc="person.name" /></t>
+            <div class="oe_structure" />
+            <div class="oe_structure">
+                <div>
+                    <div t-field="person.name" />
+                    <p>Last modified : <i t-field="person.write_date" t-optios="{'widget':'relative'}" /></p>
+                </div>
+                <div>
+                    <div t-field="person.biografy" />
+                </div>
+            </div>
+            <div class="oe_structure" />
+        </t>
+    </template>
 </odoo>

@@ -5,6 +5,7 @@
     'version': '11.0',
     'depends': ['website',],
     'data': [
+        'views/views.xml',
         'views/templates.xml',
     ],
     'demo': [

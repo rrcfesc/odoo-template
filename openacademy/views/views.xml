@@ -1,0 +1,28 @@
+<odoo>
+    <data>
+        <!-- actions opening views on models -->
+        <record model="ir.actions.act_window" id="openacademy.teachers_list_action">
+            <field name="name">Teachers</field>
+            <field name="res_model">openacademy.teachers</field>
+        </record>
+        <record id="academy_teacher_form" model="ir.actions.act_window">
+            <field name="name">teacher.form</field>
+            <field name="res_model">openacademy.teachers</field>
+            <field name="arch" type="xml">
+                <form string="Teachers Form">
+                    <sheet>
+                        <label for="name" />
+                        <field name="name" />
+                        <label for="biografy" />
+                        <field name="biografy" widget="html" />
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Top menu item -->
+        <menuitem name="Open Academy" id="openacademy_menu_root"/>
+        <!-- menu categories -->
+        <menuitem name="OpenAcademy Menu" id="openacademy.menu_1" parent="openacademy_menu_root"/>
+        <menuitem name="Teachers" id="openacademy.menu_2"     parent="openacademy.menu_1" action="teachers_list_action"/>
+  </data>
+</odoo>
