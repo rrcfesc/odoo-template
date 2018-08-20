@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <template id="index">
+        <title>Academy</title>
+        <t t-foreach="teachers" t-as="teacher">
+            <p><t t-esc="teacher"/></p>
+        </t>
+        <!--t t-if="1 == 1">
+            <p>Test</p>
+        </t-->
+        <t t-foreach="[1,2,3]" t-as="i">
+            <p><t t-esc="i" /></p>
+            <p>Value</p>
+            <t t-esc="i_value" />
+            <p>Index</p>
+            <t t-esc="i_index" />
+            <p>Size</p>
+            <t t-esc="i_size" />
+            <p>First</p>
+            <t t-esc="i_first" />
+            <p>Last</p>
+            <t t-esc="i_last" />
+            <p>Paridad</p>
+            <t t-esc="i_parity" />
+            <p>Even</p>
+            <t t-esc="i_even" />
+            <p>Odd</p>
+            <t t-esc="i_odd" />
+        </t>
+    </template>
+</odoo>
