@@ -8,7 +8,7 @@
         <!--t t-if="1 == 1">
             <p>Test</p>
         </t-->
-        <t t-foreach="[1,2,3]" t-as="i">
+        <!--t t-foreach="[1,2,3]" t-as="i">
             <p><t t-esc="i" /></p>
             <p>Value</p>
             <t t-esc="i_value" />
@@ -26,6 +26,11 @@
             <t t-esc="i_even" />
             <p>Odd</p>
             <t t-esc="i_odd" />
+        </t-->
+        <div t-att-a="42">asdasd</div>
+        <t t-foreach="[1,2,3]" t-as="item">
+            <li t-attf-class="row {{ item }}"> <t t-esc="item"/> </li>
         </t>
+        <div t-att="{'a':12, 'b':1452}" />
     </template>
 </odoo>
