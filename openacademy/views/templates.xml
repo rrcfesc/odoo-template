@@ -2,9 +2,9 @@
 <odoo>
     <template id="index">
         <title>Academy</title>
-        <t t-foreach="teachers" t-as="teacher">
+        <!--t t-foreach="teachers" t-as="teacher">
             <p><t t-esc="teacher"/></p>
-        </t>
+        </t-->
         <!--t t-if="1 == 1">
             <p>Test</p>
         </t-->
@@ -27,10 +27,13 @@
             <p>Odd</p>
             <t t-esc="i_odd" />
         </t-->
-        <div t-att-a="42">asdasd</div>
+        <!--div t-att-a="42">asdasd</div>
         <t t-foreach="[1,2,3]" t-as="item">
             <li t-attf-class="row {{ item }}"> <t t-esc="item"/> </li>
         </t>
         <div t-att="{'a':12, 'b':1452}" />
+        <div t-att="['a', 'b']" /-->
+        <t t-set="foo" t-value=" 1 + 2" />
+        <t t-esc="foo"/>
     </template>
 </odoo>
