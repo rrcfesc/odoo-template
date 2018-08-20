@@ -1,5 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
+    <template id="other-template">
+        <h1>Hola desde other template</h1>
+    </template>
     <template id="index">
         <title>Academy</title>
         <!--t t-foreach="teachers" t-as="teacher">
@@ -33,7 +36,9 @@
         </t>
         <div t-att="{'a':12, 'b':1452}" />
         <div t-att="['a', 'b']" /-->
-        <t t-set="foo" t-value=" 1 + 2" />
-        <t t-esc="foo"/>
+        <!--t t-set="foo" t-value=" 1 + 2" />
+        <t t-esc="foo"/-->
+        <t t-call="openacademy.other-template"/>
     </template>
+   
 </odoo>
