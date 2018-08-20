@@ -3,7 +3,7 @@
     'category': 'Website',
     'description': 'Generic controller for web forms',
     'version': '11.0',
-    'depends': ['website',],
+    'depends': ['website_sale',],
     'data': [
         'views/views.xml',
         'views/templates.xml',
