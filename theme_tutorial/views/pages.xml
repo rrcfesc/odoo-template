@@ -9,7 +9,7 @@
         <field name="arch" type="xml">
             <t t-name="theme_tutorial.services_page_template">
                 <t t-call="website.layout">
-                <t t-set="title">Serssss</t>
+                    <t t-set="title">Serssss</t>
                     <div class="wrap">
                         <div class="container">
                             <h1>Our Services</h1>
@@ -24,5 +24,27 @@
                 </t>
             </t>
         </field>
+    </record>
+    <template id="services_page_template_final">
+        <t t-call="website.layout">
+            <t t-set="title">Serssss</t>
+            <div class="wrap">
+                <div class="container">
+                    <h1>Our Services</h1>
+                    <ul class="services">
+                        <li>asd</li>
+                        <li>111</li>
+                        <li>2323</li>
+                    </ul>
+                </div>
+                <div class="oe_structure"/>
+            </div>
+        </t>
+    </template>
+    <record id="services_page_final" model="website.page">
+        <field name="name">Services Page Final</field>
+        <field name="website_published" eval="True" />
+        <field name="url">/services_final</field>
+        <field name="view_id" ref="services_page_template_final" />
     </record>
 </odoo>
