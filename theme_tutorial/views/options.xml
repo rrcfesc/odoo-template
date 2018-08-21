@@ -3,7 +3,7 @@
     <template id="snippet_testimonial_options"  inherit_id="website.snippet_options" name="Snippet Testimonial Options">
         <xpath expr="//div[@data-js='background']" position='after'>
             <!--mandatory -->
-            <div data-selector=".snippet_testimonial">
+            <div data-js='snippet_testimonial_options' data-selector=".snippet_testimonial">
                 <li class="dropdown-submenu">
                     <a href="#">Your Option</a>
                     <ul class="dropdown-menu">
