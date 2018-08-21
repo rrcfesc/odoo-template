@@ -22,7 +22,6 @@ class WebsiteSaleInh(WebsiteSale):
         print("Testing")
         res = super(WebsiteSaleInh, self).shop(page=page, category = category, search= search, ppg = ppg, **post)
         res.qcontext['search'] = 'ipad'
-        import ipdb;ipdb.set_trace()
         res.qcontext['categories'] = res.qcontext['categories'].sorted(key = lambda r:r.name)
         res.qcontext['products'] = res.qcontext['products'].sorted(key = lambda r:r.name)
 
