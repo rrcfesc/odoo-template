@@ -4,6 +4,7 @@
     'version' : '11.0',
     'author': 'B&F',
     'data'  : [
+        'views/assets.xml',
         'views/layout.xml',
         'views/pages.xml',
     ],
