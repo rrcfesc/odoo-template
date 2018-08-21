@@ -5,6 +5,8 @@
     'author': 'B&F',
     'data'  : [
         'views/assets.xml',
+        'views/image_gallery.xml',
+        'views/snippets.xml',
         'views/layout.xml',
         'views/pages.xml',
     ],
