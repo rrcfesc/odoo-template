@@ -3,7 +3,7 @@
     <!--mandatory -->
     <template id="snippet_testimonial" name="Testimonial Snippet">
         <!--mandatory if yoy want do the same -->
-        <section class="snippet_testimonial">
+        <section class="snippet_testimonial" contenteditable= "True">
             <div class="container text-center">
                 <div class="row">
                     <div class="col-md-4">
