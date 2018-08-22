@@ -6,17 +6,14 @@
             <div class="oe_structure">
                 <t t-esc="user_id.name" />
                 <t t-foreach="teachers" t-as="teacher">
-                    <p>
-                        <t t-esc="teacher.id"/>
-                        <a t-attf-href="/academy/{{ slug(teacher) }}">link</a>
-                        <t t-esc="teacher.name" />
+                    <p class="rpc-container" t-att-data-teacher-id='teacher.id'>
+                        <a href="#" class="rpc-button">
+                            <t t-esc='teacher.name' />
+                        </a>
                     </p>
                 </t>
             </div>
-            <div class="counter">
-                <span class="val">
-                </span>
-                <button> Increment ME!</button>
+            <div class="biografy">
             </div>
         </t>
     </template>
