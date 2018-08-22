@@ -1,4 +1,4 @@
-odoo.define('academy.animal', function(require) {
+odoo.define('academy.counter', function(require) {
     'use strict';
     var Widget          = require('web.Widget');
     var core            = require('web.core');

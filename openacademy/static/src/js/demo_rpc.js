@@ -1,4 +1,4 @@
-odoo.define('academy.animal', function(require) {
+odoo.define('academy.demo_rpc', function(require) {
     'use strict';
     var Widget          = require('web.Widget');
     var core            = require('web.core');
