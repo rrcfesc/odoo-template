@@ -13,6 +13,11 @@
                     </p>
                 </t>
             </div>
+            <div class="counter">
+                <span class="val">
+                </span>
+                <button> Increment ME!</button>
+            </div>
         </t>
     </template>
     <template id="biografy">
