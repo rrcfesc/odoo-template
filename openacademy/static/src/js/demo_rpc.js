@@ -6,6 +6,7 @@ odoo.define('academy.animal', function(require) {
     require('web.dom_ready');
 
     var RpcButton = Widget.extend({
+        self :this,
         events : {
             'click .rpc-button' :  'onClick'
         },
@@ -16,16 +17,15 @@ odoo.define('academy.animal', function(require) {
         onClick : function(ev) {
             console.log("Clicked");
             rpc.query({
-                model : 'openacademy.teachers',
-                method : 'search_read',
-                args: [[['id', '=', this.$el.data('teacher-id')]], ['biografy']],
-            }).then(function(data) {
-                if (data.length) {
-                    console.log(data);
-                    $('.biografy').html(data[0].biografy);
+                route : '/academy/search_teacher',
+                params : {
+                    teacher_id :  this.$el.data('teacher-id')
                 }
+            }).then(function(teacher_found) {
+                $(".biografy").html(teacher_found[0].biografy);
+
             });
-        }
+        },
     });
     if (!$('.rpc-container').length) {
         return $.Defferred().reject("Dom does not contain .rpc-container");

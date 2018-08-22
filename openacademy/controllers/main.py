@@ -15,6 +15,18 @@ class Academy(http.Controller):
     @http.route('/academy/<model("openacademy.teachers"):teacher>', auth='public', website=True)
     def teacher2(self, teacher):
         return http.request.render('openacademy.biografy',{'person':teacher})
+    
+    @http.route('/academy/search_teacher', type="json" ,auth='public', website=True)
+    def search_teacher(self, **args):
+        teacher_obj = http.request.env['openacademy.teachers']
+        teachers = teacher_obj.search_read(
+            [('id', '=', args.get('teacher_id', False))], 
+            fields=['biografy'])
+
+
+
+        return teachers
+    
 
 class WebsiteSaleInh(WebsiteSale):
     @http.route()
