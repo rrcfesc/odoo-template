@@ -9,5 +9,6 @@ services:
           - ./openacademy:/home/myosusr/openacademy-repo/openacademy
           - ./theme_tutorial:/home/myosusr/openacademy-repo/theme_tutorial
           - ./web_widget_color:/home/myosusr/openacademy-repo/web_widget_color
+          - ./web_widget_datepicker_options:/home/myosusr/openacademy-repo/web_widget_datepicker_options
           - ./.odoorc:/home/myosusr/.odoorc
           - ./odoo-repo:/home/myosusr/odoo-repo

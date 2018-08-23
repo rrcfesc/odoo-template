@@ -17,6 +17,8 @@
                         <field name="color" widget='color' />
                         <label for="biografy" />
                         <field name="biografy" widget="html" />
+                        <label for="birth_date" />
+                        <field name="birth_date" options="{'datepicker': {'defaultDate': '1/1/2010', 'daysOfWeekDisabled':[0,6]}}"/>
                     </sheet>
                 </form>
             </field>
@@ -29,6 +31,7 @@
                 <tree editable="top">
                     <field name="name" />
                     <field name="color" widget='color' />
+                    <field name="birth_date" options="{'datepicker': {'defaultDate': '', 'daysOfWeekDisabled':[0,6]}}"/>
                 </tree>
             </field>
         </record>
