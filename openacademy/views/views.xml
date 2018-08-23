@@ -5,14 +5,16 @@
             <field name="name">Teachers</field>
             <field name="res_model">openacademy.teachers</field>
         </record>
-        <record id="academy_teacher_form" model="ir.actions.act_window">
-            <field name="name">teacher.form</field>
-            <field name="res_model">openacademy.teachers</field>
+        <record id="academy_teacher_form2" model="ir.ui.view">
+            <field name="name">teacher : form</field>
+            <field name="model">openacademy.teachers</field>
             <field name="arch" type="xml">
                 <form string="Teachers Form">
                     <sheet>
                         <label for="name" />
                         <field name="name" />
+                        <label for="color" />
+                        <field name="color" widget='color' />
                         <label for="biografy" />
                         <field name="biografy" widget="html" />
                     </sheet>

@@ -8,5 +8,6 @@ services:
     volumes:
           - ./openacademy:/home/myosusr/openacademy-repo/openacademy
           - ./theme_tutorial:/home/myosusr/openacademy-repo/theme_tutorial
+          - ./web_widget_color:/home/myosusr/openacademy-repo/web_widget_color
           - ./.odoorc:/home/myosusr/.odoorc
           - ./odoo-repo:/home/myosusr/odoo-repo
