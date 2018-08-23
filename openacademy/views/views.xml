@@ -21,6 +21,17 @@
                 </form>
             </field>
         </record>
+
+        <record id="academy_teacher_tree" model="ir.ui.view">
+            <field name="name">teacher : form</field>
+            <field name="model">openacademy.teachers</field>
+            <field name="arch" type="xml">
+                <tree editable="top">
+                    <field name="name" />
+                    <field name="color" widget='color' />
+                </tree>
+            </field>
+        </record>
         <!-- Top menu item -->
         <menuitem name="Open Academy" id="openacademy_menu_root"/>
         <!-- menu categories -->

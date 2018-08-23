@@ -28,7 +28,7 @@ odoo.define('academy.demo_rpc', function(require) {
         },
     });
     if (!$('.rpc-container').length) {
-        return $.Defferred().reject("Dom does not contain .rpc-container");
+        return $.Deferred().reject("Dom does not contain .rpc-container");
     }
     $(".rpc-container").each(function(idx) {
         var $elem = $(this);
