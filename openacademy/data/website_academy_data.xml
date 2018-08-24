@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="openacademy.model_openacademy_teachers" model='ir.model'>
+            <field name="website_form_default_field_id" ref='openacademy.field_openacademy_teachers_biografy' />
+            <field name="website_form_access">True</field>
+            <field name="website_form_label">Create a Teache</field>
+        </record>
+        <function model='ir.model.fields' name='formbuilder_whitelist'>
+            <value>openacademy.teachers</value>
+            <value eval="['name', 'biografy']"></value>
+        </function>
+    </data>
+</odoo>
